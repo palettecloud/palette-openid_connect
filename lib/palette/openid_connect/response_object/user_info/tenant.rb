@@ -2,7 +2,7 @@ module Palette
   module OpenIDConnect
     class ResponseObject
       class UserInfo
-        class Tenant < ConnectObject
+        class Tenant < ::OpenIDConnect::ConnectObject
           attr_required :company
           attr_optional :labels
           validate :require_at_least_one_attributes

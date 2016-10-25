@@ -2,7 +2,7 @@ module Palette
   module OpenIDConnect
     class ResponseObject
       class UserInfo
-        class Company < ConnectObject
+        class Company < ::OpenIDConnect::ConnectObject
           attr_required :name, :code
         end
       end

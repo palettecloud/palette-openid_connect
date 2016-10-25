@@ -1,5 +1,5 @@
 module Palette
-  module OpenidConnect
+  module OpenIDConnect
     VERSION = "0.1.0"
   end
 end

@@ -2,7 +2,7 @@ module Palette
   module OpenIDConnect
     class ResponseObject
       class UserInfo
-        class Address < Address
+        class Address < ::OpenIDConnect::ResponseObject::UserInfo::Address
           attr_optional :location
         end
       end

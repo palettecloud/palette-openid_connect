@@ -5,7 +5,7 @@ require 'palette/openid_connect/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "palette-openid_connect"
-  spec.version       = Palette::OpenidConnect::VERSION
+  spec.version       = Palette::OpenIDConnect::VERSION
   spec.authors       = ["Yuki Masutomi"]
   spec.email         = ["tommy@machikoe.com"]
 

@@ -1,6 +1,6 @@
 module Palette
   module OpenIDConnect
-    class ResponseObject < ResponseObject
+    class ResponseObject < ::OpenIDConnect::ResponseObject
     end
   end
 end

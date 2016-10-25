@@ -1,7 +1,9 @@
+require 'palette/openid_connect/response_object/monkey/user_info'
+
 module Palette
   module OpenIDConnect
     class ResponseObject
-      class UserInfo < UserInfo
+      class UserInfo < ::OpenIDConnect::ResponseObject::UserInfo
         attr_optional(
           :tenants,
           :services,
