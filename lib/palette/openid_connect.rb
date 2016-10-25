@@ -1,7 +1,8 @@
 require "palette/openid_connect/version"
 
 module Palette
-  module OpenidConnect
-    # Your code goes here...
+  module OpenIDConnect < ::OpenIDConnect
   end
 end
+
+require 'openid_connect/response_object'
