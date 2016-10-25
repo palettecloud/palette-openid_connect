@@ -9,6 +9,12 @@ module Palette
           :services,
         )
 
+        # NOTE because AttrOptional overrides
+        #      address= definition in OpenIDConnect::ResponseObject::UserInfo
+        def address=(hash_or_address)
+          super
+        end
+
         def tenants=(array_of_hash_or_tenants)
           return nil if array_of_hash_or_tenants.nil?
 
