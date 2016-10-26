@@ -2,7 +2,7 @@ module Palette
   module OpenIDConnect
     class ResponseObject
       class UserInfo
-        class Tenant < ::OpenIDConnect::ConnectObject
+        class Contractor < ::OpenIDConnect::ConnectObject
           attr_optional :contracts
           attr_optional :identity_code
           attr_optional :labels

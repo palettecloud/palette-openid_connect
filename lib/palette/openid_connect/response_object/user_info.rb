@@ -5,7 +5,7 @@ module Palette
     class ResponseObject
       class UserInfo < ::OpenIDConnect::ResponseObject::UserInfo
         attr_optional(
-          :tenants,
+          :members,
           :services,
         )
 
@@ -15,15 +15,15 @@ module Palette
           super
         end
 
-        def tenants=(array_of_hash_or_tenants)
-          return nil if array_of_hash_or_tenants.nil?
+        def members=(array_of_hash_or_members)
+          return nil if array_of_hash_or_members.nil?
 
-          @tenants = array_of_hash_or_tenants.map do |hash_or_tenant|
-            case hash_or_tenant
+          @members = array_of_hash_or_members.map do |hash_or_member|
+            case hash_or_member
             when Hash
-              Tenant.new hash_or_tenant
-            when Tenant
-              hash_or_tenant
+              Member.new hash_or_member
+            when Member
+              hash_or_member
             end
           end
         end
@@ -39,7 +39,7 @@ module Palette
 
         private
           def non_string_attributes
-            super | [:tenants, :services]
+            super | [:members, :services]
           end
       end
     end
