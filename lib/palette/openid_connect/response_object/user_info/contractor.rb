@@ -30,6 +30,10 @@ module Palette
               [array_or_string]
             end
           end
+
+          def labels
+            @labels || []
+          end
         end
       end
     end

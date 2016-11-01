@@ -46,6 +46,10 @@ module Palette
             end
           end
 
+          def services
+            @services || []
+          end
+
         end
       end
     end

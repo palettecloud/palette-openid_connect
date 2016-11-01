@@ -28,6 +28,10 @@ module Palette
           end
         end
 
+        def members
+          @members || []
+        end
+
         def services=(array_or_string)
           @services = case array_or_string
           when Array
@@ -35,6 +39,10 @@ module Palette
           when String
             [array_or_string]
           end
+        end
+
+        def services
+          @services || []
         end
 
         private
