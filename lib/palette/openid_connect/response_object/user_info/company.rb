@@ -3,7 +3,8 @@ module Palette
     class ResponseObject
       class UserInfo
         class Company < ::OpenIDConnect::ConnectObject
-          attr_required :name, :code, :subdomain, :service_name
+          attr_required :name, :code
+          attr_optional :subdomain, :service_name
         end
       end
     end
