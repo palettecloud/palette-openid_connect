@@ -32,12 +32,16 @@ module Palette
           @members || []
         end
 
-        def services=(array_or_string)
-          @services = case array_or_string
-          when Array
-            array_or_string
-          when String
-            [array_or_string]
+        def services=(array_of_hash_or_services)
+          return nil if array_of_hash_or_services.nil?
+
+          @services = array_of_hash_or_services.map do |hash_or_service|
+            case hash_or_service
+            when Hash
+              Service.new hash_or_service
+            when Service
+              hash_or_service
+            end
           end
         end
 
