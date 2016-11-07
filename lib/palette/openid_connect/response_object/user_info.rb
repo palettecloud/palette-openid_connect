@@ -13,7 +13,12 @@ module Palette
         # NOTE because AttrOptional overrides
         #      address= definition in OpenIDConnect::ResponseObject::UserInfo
         def address=(hash_or_address)
-          super
+          @address = case hash_or_address
+          when Hash
+            Address.new hash_or_address
+          when Address
+            hash_or_address
+          end
         end
 
         def members=(array_of_hash_or_members)
