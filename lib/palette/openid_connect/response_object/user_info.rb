@@ -7,6 +7,7 @@ module Palette
         attr_optional(
           :members,
           :services,
+          :palette_id,
         )
 
         # NOTE because AttrOptional overrides
