@@ -5,6 +5,9 @@ module Palette
     class ResponseObject
       class UserInfo < ::OpenIDConnect::ResponseObject::UserInfo
         attr_optional(
+          :name_kana,
+          :family_name_kana,
+          :given_name_kana,
           :members,
           :services,
           :palette_id,
