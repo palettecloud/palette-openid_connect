@@ -9,7 +9,6 @@ module Palette
           :family_name_kana,
           :given_name_kana,
           :members,
-          :services,
           :palette_id,
         )
 
@@ -41,26 +40,9 @@ module Palette
           @members || []
         end
 
-        def services=(array_of_hash_or_services)
-          return nil if array_of_hash_or_services.nil?
-
-          @services = array_of_hash_or_services.map do |hash_or_service|
-            case hash_or_service
-            when Hash
-              Service.new hash_or_service
-            when Service
-              hash_or_service
-            end
-          end
-        end
-
-        def services
-          @services || []
-        end
-
         private
           def non_string_attributes
-            super | [:members, :services]
+            super | [:members]
           end
       end
     end
