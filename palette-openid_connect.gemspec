@@ -7,11 +7,11 @@ Gem::Specification.new do |spec|
   spec.name          = "palette-openid_connect"
   spec.version       = Palette::OpenIDConnect::VERSION
   spec.authors       = ["Yuki Masutomi"]
-  spec.email         = ["tommy@machikoe.com"]
+  spec.email         = ["tommy@palette.cloud"]
 
   spec.summary       = %q{extended nov/openid_connect for Palette.}
   spec.description   = %q{extended nov/openid_connect for Palette.}
-  spec.homepage      = "https://github.com/machikoe/palette-openid_connect"
+  spec.homepage      = "https://github.com/palettecloud/palette-openid_connect"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
