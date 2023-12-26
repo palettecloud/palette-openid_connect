@@ -5,7 +5,6 @@ module Palette
         class Member < ::OpenIDConnect::ConnectObject
           attr_required :company
           attr_optional :cluboff_id
-          attr_optional :person
           attr_optional :tenant
           attr_optional :contractor
           validate :require_at_least_one_attributes
@@ -16,15 +15,6 @@ module Palette
               Company.new hash_or_company
             when Company
               hash_or_company
-            end
-          end
-
-          def person=(hash_or_person)
-            @person = case hash_or_person
-            when Hash
-              Tenant.new hash_or_person
-            when Person
-              hash_or_person
             end
           end
 
