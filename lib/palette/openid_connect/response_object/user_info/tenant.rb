@@ -6,7 +6,6 @@ module Palette
           # TODO future
           # attr_optional :contracts
           attr_optional :identity_code
-          attr_optional :labels
           validate :require_at_least_one_attributes
 
           # def contracts=(array_of_hash_or_contracts)
@@ -21,19 +20,6 @@ module Palette
           #     end
           #   end
           # end
-
-          def labels=(array_or_string)
-            @labels = case array_or_string
-            when Array
-              array_or_string
-            when String
-              [array_or_string]
-            end
-          end
-
-          def labels
-            @labels || []
-          end
 
         end
       end
