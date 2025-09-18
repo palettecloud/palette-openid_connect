@@ -22,7 +22,7 @@ module Palette
           def person=(hash_or_person)
             @person = case hash_or_person
             when Hash
-              Tenant.new hash_or_person
+              Person.new hash_or_person
             when Person
               hash_or_person
             end
